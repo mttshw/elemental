@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<head>
+    <title>Fabrica</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+    <site-header></site-header>
+    <main>
+        <site-nav></site-nav>
+        <section id="content">
+            <h1>Button</h1>
+
+            <h4>Button (default)</h4>
+            <fabrica-button>Click me</fabrica-button>
+            <pre><code>&lt;fabrica-button&gt;Click me&lt;/fabrica-button&gt;</code></pre>
+
+            <fabrica-button disabled>Disabled button</fabrica-button>
+            <pre><code>&lt;fabrica-button disabled&gt;Disabled button&lt;/fabrica-button&gt;</code></pre>
+
+            <h4>Outlined</h4>
+            <fabrica-button type="outlined">Open example</fabrica-button>
+            <pre><code>&lt;fabrica-button type="outlined"&gt;Open example&lt;/fabrica-button&gt;</code></pre>
+            <fabrica-button type="outlined" disabled>Open example disabled</fabrica-button>
+            <pre><code>&lt;fabrica-button type="outlined" disabled&gt;Open example disabled&lt;/fabrica-button&gt;</code></pre>
+            
+            <h4>Text</h4>
+            <fabrica-button type="text">Click me</fabrica-button>
+            <pre><code>&lt;fabrica-button type="text"&gt;Click me&lt;/fabrica-button&gt;</code></pre>
+            <fabrica-button type="text" disabled>Click me disabled</fabrica-button>
+            <pre><code>&lt;fabrica-button type="text" disabled&gt;Click me disabled&lt;/fabrica-button&gt;</code></pre>
+
+            <h4>With icon</h4>
+            <fabrica-button>
+                <span slot="start">🔥</span>
+                Click me
+            </fabrica-button>
+            <pre><code>
+                &lt;fabrica-button&gt;
+                    &lt;span slot="start"&gt;🔥&lt;/span&gt;
+                    Click me
+                &lt;/fabrica-button&gt;
+            </code></pre>
+
+            <fabrica-button>
+                Click me
+                <span slot="end">➡️</span>
+            </fabrica-button>
+            <pre><code>
+                &lt;fabrica-button&gt;
+                    Click me
+                    &lt;span slot="end"&gt;➡️&lt;/span&gt;
+                &lt;/fabrica-button&gt;
+            </code></pre>        
+
+            <fabrica-button type="outlined">
+                <span slot="start">🔥</span>
+                Click me
+                <span slot="end">➡️</span>
+            </fabrica-button>
+            <pre><code>
+                &lt;fabrica-button type="outlined"&gt;
+                    &lt;span slot="start"&gt;🔥&lt;/span&gt;
+                    Click me
+                    &lt;span slot="end"&gt;➡️&lt;/span&gt;
+                &lt;/fabrica-button&gt;
+            </code></pre>   
+
+            <fabrica-button type="text">
+                <span slot="start">🔥</span>
+                Click me
+                <span slot="end">➡️</span>
+            </fabrica-button>
+            <pre><code>
+                &lt;fabrica-button type="text"&gt;
+                    &lt;span slot="start"&gt;🔥&lt;/span&gt;
+                    Click me
+                    &lt;span slot="end"&gt;➡️&lt;/span&gt;
+                &lt;/fabrica-button&gt;
+            </code></pre>
+
+            <h4>Link</h4>
+
+            <fabrica-button as="link" href="https://example.com" target="_blank">Open example</fabrica-button>
+
+            <pre><code>&lt;fabrica-button as="link" href="https://example.com" target="_blank"&gt;Open example&lt;/fabrica-button&gt;</code></pre>
+
+            <h4>Sizes</h4>
+
+            <fabrica-button size="small">Small Button</fabrica-button>
+            <pre><code>&lt;fabrica-button size="small"&gt;Small Button&lt;/fabrica-button&gt;</code></pre>  
+
+            <fabrica-button size="medium">Medium Button</fabrica-button>
+            <pre><code>&lt;fabrica-button size="medium"&gt;Medium Button&lt;/fabrica-button&gt;</code></pre>    
+
+            <fabrica-button size="large">Large Button</fabrica-button>
+            <pre><code>&lt;fabrica-button size="large"&gt;Large Button&lt;/fabrica-button&gt;</code></pre>      
+
+            <h4>Events</h4>
+            <p>Pass the event name you're listening for and the button will dispatch that event when clicked.</p>
+
+            <fabrica-button click-event="custom-event">Click me</fabrica-button>
+            <pre><code>
+                &lt;fabrica-button click-event="custom-event"&gt;Click me&lt;/fabrica-button&gt;
+            </code></pre> 
+            <pre><code>
+                document.addEventListener('custom-event', () =&gt; {
+                    alert('Custom event triggered!');
+                });
+            </code></pre>
+            <script>
+                document.addEventListener('custom-event', () => {
+                    alert('Custom event triggered!');
+                });
+            </script>
+        </section>
+    </main>
+
+    <site-footer></site-footer>
+    <script type="module" defer src="/site/site-footer.js"></script>
+    <script type="module" defer src="/site/site-header.js"></script>
+    <script type="module" defer src="/site/site-nav.js"></script>
+    <script type="module" defer src="/js/components/fabrica-button.js"></script>
+</body>
+</html>

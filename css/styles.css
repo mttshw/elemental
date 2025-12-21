@@ -5,4 +5,48 @@
     --primary-color-contrast: white;
 
     --accent-color: rgb(255, 193, 7);
+
+    --button-color: var(--primary-color);
+    --button-color-hover: var(--primary-color-dark);
+    --button-contrast-color: var(--primary-color-contrast);
+    --button-padding: 10px 20px;
+    --button-border-radius: 4px;
+    --button-padding-small: 4px 8px;
+    --button-padding-large: 12px 24px;
+    --button-font-size: 1rem;
+    --button-font-size-small: 0.875rem;
+    --button-font-size-large: 1.25rem;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+}
+site-nav {
+    width: 200px;
+    background-color: #ffffff;
+    border-right: 1px solid #ddd;
+}
+#content {
+    flex: 1;
+    padding: 20px;
+
+    h1 {
+        margin-top: 0;
+    }
+}
+
+pre {
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 4px;
+    overflow-x: auto;
 }

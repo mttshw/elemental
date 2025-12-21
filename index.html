@@ -4,31 +4,19 @@
     <link rel="stylesheet" type="text/css" href="/css/styles.css">
 </head>
 <body>
-    <header>
-        <h2>Fabrica</h2>
-        <p>Web component library</p>
-    </header>
-    <section>
-        <h1>Getting Started</h1>
-        <p>Welcome to Fabrica! This is a web component library that allows you to create reusable components for your web applications.</p>
-    </section>
-    <section>
-        <h2>Components</h2>
-        <h3>Button</h3>
-        <p>Usage examples</p>
+    <site-header></site-header>
+    <main>
+        <site-nav></site-nav>
+        <section id="content">
+            <h1>Getting Started</h1>
+            <p>Welcome to Fabrica! A themable library that allows you to quickly build native HTML pages and applications.</p>
 
-        <h4>Button (default)</h4>
-        <fabrica-button>Click me</fabrica-button>
-
-        <h4>Button with disabled</h4>
-        <fabrica-button disabled>Can't click</fabrica-button>
-
-        <h4>Outlined</h4>
-        <fabrica-button type="outlined">Open example</fabrica-button>
-
-        <h4>Text</h4>
-        <fabrica-button type="text">Click me</fabrica-button>
-    </section>
+        </section>
+    </main>
+    <site-footer></site-footer>
+    <script type="module" defer src="/site/site-footer.js"></script>
+    <script type="module" defer src="/site/site-header.js"></script>
+    <script type="module" defer src="/site/site-nav.js"></script>
     <script type="module" defer src="/js/components/fabrica-button.js"></script>
 </body>
 </html>
