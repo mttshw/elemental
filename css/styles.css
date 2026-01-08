@@ -16,6 +16,7 @@
     --elemnt-button-font-size: 1rem;
     --elemnt-button-font-size-small: 0.875rem;
     --elemnt-button-font-size-large: 1.25rem;
+    --elemnt-button-border-width: 2px;
 
     --elemnt-card-background-color: white;
     --elemnt-card-border-color: #ddd;
@@ -62,5 +63,5 @@ pre {
     padding: 10px;
     border-radius: 4px;
     overflow-x: auto;
-    max-width: 400px;
+    max-width: 100%;
 }

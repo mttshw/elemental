@@ -11,71 +11,75 @@
             <h1>Button</h1>
 
             <h4>Button (default)</h4>
-            <elemnt-button>Click me</elemnt-button>
-            <pre><code>&lt;elemnt-button&gt;Click me&lt;/elemnt-button&gt;</code></pre>
+            <elemnt-button>Default</elemnt-button>
+            <elemnt-button disabled>Disabled</elemnt-button>
+            <elemnt-button type="outlined">Outlined button</elemnt-button>
+            <elemnt-button type="outlined" disabled>Outlined disabled</elemnt-button>
 
-            <elemnt-button disabled>Disabled button</elemnt-button>
-            <pre><code>&lt;elemnt-button disabled&gt;Disabled button&lt;/elemnt-button&gt;</code></pre>
+            <pre><code>
+&lt;elemnt-button&gt;Click me&lt;/elemnt-button&gt;
+&lt;elemnt-button disabled&gt;Disabled button&lt;/elemnt-button&gt;
+&lt;elemnt-button type="outlined"&gt;Outlined button&lt;/elemnt-button&gt;
+&lt;elemnt-button type="text" disabled&gt;Outlined disabled&lt;/elemnt-button&gt;
+</code></pre>
 
-            <h4>Outlined</h4>
-            <elemnt-button type="outlined">Open example</elemnt-button>
-            <pre><code>&lt;elemnt-button type="outlined"&gt;Open example&lt;/elemnt-button&gt;</code></pre>
-            <elemnt-button type="outlined" disabled>Open example disabled</elemnt-button>
-            <pre><code>&lt;elemnt-button type="outlined" disabled&gt;Open example disabled&lt;/elemnt-button&gt;</code></pre>
             
             <h4>Text</h4>
             <elemnt-button type="text">Click me</elemnt-button>
             <pre><code>&lt;elemnt-button type="text"&gt;Click me&lt;/elemnt-button&gt;</code></pre>
             <elemnt-button type="text" disabled>Click me disabled</elemnt-button>
-            <pre><code>&lt;elemnt-button type="text" disabled&gt;Click me disabled&lt;/elemnt-button&gt;</code></pre>
+            <pre><code></code></pre>
 
             <h4>With icon</h4>
             <elemnt-button>
                 <span slot="start">🔥</span>
-                Click me
+                Icon at start
             </elemnt-button>
-            <pre><code>
-                &lt;elemnt-button&gt;
-                    &lt;span slot="start"&gt;🔥&lt;/span&gt;
-                    Click me
-                &lt;/elemnt-button&gt;
-            </code></pre>
-
             <elemnt-button>
-                Click me
+                Icon at end
                 <span slot="end">➡️</span>
             </elemnt-button>
-            <pre><code>
-                &lt;elemnt-button&gt;
-                    Click me
-                    &lt;span slot="end"&gt;➡️&lt;/span&gt;
-                &lt;/elemnt-button&gt;
-            </code></pre>        
-
             <elemnt-button type="outlined">
                 <span slot="start">🔥</span>
-                Click me
+                Outlined with icons
                 <span slot="end">➡️</span>
             </elemnt-button>
-            <pre><code>
-                &lt;elemnt-button type="outlined"&gt;
-                    &lt;span slot="start"&gt;🔥&lt;/span&gt;
-                    Click me
-                    &lt;span slot="end"&gt;➡️&lt;/span&gt;
-                &lt;/elemnt-button&gt;
-            </code></pre>   
-
             <elemnt-button type="text">
                 <span slot="start">🔥</span>
-                Click me
+                Text button with icons
                 <span slot="end">➡️</span>
             </elemnt-button>
+            <elemnt-button type="text">
+                SVG Icon
+                <span slot="end">
+                    <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 1H4L0 5L4 9H5V6H11C12.6569 6 14 7.34315 14 9C14 10.6569 12.6569 12 11 12H4V14H11C13.7614 14 16 11.7614 16 9C16 6.23858 13.7614 4 11 4H5V1Z" fill="#000000"/>
+                    </svg>
+                </span>
+            </elemnt-button>
+
             <pre><code>
-                &lt;elemnt-button type="text"&gt;
-                    &lt;span slot="start"&gt;🔥&lt;/span&gt;
-                    Click me
-                    &lt;span slot="end"&gt;➡️&lt;/span&gt;
-                &lt;/elemnt-button&gt;
+&lt;elemnt-button&gt;
+    &lt;span slot="start"&gt;🔥&lt;/span&gt;
+    Icon at start
+&lt;/elemnt-button&gt;
+
+&lt;elemnt-button&gt;
+    Icon at end
+    &lt;span slot="end"&gt;➡️&lt;/span&gt;
+&lt;/elemnt-button&gt;
+
+&lt;elemnt-button type="outlined"&gt;
+    &lt;span slot="start"&gt;🔥&lt;/span&gt;
+    Outlined with icons
+    &lt;span slot="end"&gt;➡️&lt;/span&gt;
+&lt;/elemnt-button&gt;
+
+&lt;elemnt-button type="text"&gt;
+    &lt;span slot="start"&gt;🔥&lt;/span&gt;
+    Text button with icons
+    &lt;span slot="end"&gt;➡️&lt;/span&gt;
+&lt;/elemnt-button&gt;
             </code></pre>
 
             <h4>Link</h4>
@@ -87,31 +91,74 @@
             <h4>Sizes</h4>
 
             <elemnt-button size="small">Small Button</elemnt-button>
-            <pre><code>&lt;elemnt-button size="small"&gt;Small Button&lt;/elemnt-button&gt;</code></pre>  
-
             <elemnt-button size="medium">Medium Button</elemnt-button>
-            <pre><code>&lt;elemnt-button size="medium"&gt;Medium Button&lt;/elemnt-button&gt;</code></pre>    
-
             <elemnt-button size="large">Large Button</elemnt-button>
-            <pre><code>&lt;elemnt-button size="large"&gt;Large Button&lt;/elemnt-button&gt;</code></pre>      
+
+            <pre><code>
+&lt;elemnt-button size="small"&gt;Small Button&lt;/elemnt-button&gt;
+&lt;elemnt-button size="medium"&gt;Medium Button&lt;/elemnt-button&gt;
+&lt;elemnt-button size="large"&gt;Large Button&lt;/elemnt-button&gt;</code></pre>      
 
             <h4>Events</h4>
             <p>Pass the event name you're listening for and the button will dispatch that event when clicked.</p>
 
             <elemnt-button click-event="custom-event">Click me</elemnt-button>
             <pre><code>
-                &lt;elemnt-button click-event="custom-event"&gt;Click me&lt;/elemnt-button&gt;
+&lt;elemnt-button click-event="custom-event"&gt;Click me&lt;/elemnt-button&gt;
             </code></pre> 
             <pre><code>
-                document.addEventListener('custom-event', () =&gt; {
-                    alert('Custom event triggered!');
-                });
+document.addEventListener('custom-event', () =&gt; {
+    alert('Custom event triggered!');
+});
             </code></pre>
             <script>
                 document.addEventListener('custom-event', () => {
                     alert('Custom event triggered!');
                 });
             </script>
+
+            <h4>Button group</h4>
+
+            <p>Default</p>
+            <elemnt-button-group>
+                <elemnt-button>Button 1</elemnt-button>
+                <elemnt-button>Button 2</elemnt-button>
+                <elemnt-button>Button 3</elemnt-button>
+            </elemnt-button-group>
+
+            <p>Outlined</p>
+            <elemnt-button-group type="outlined">
+                <elemnt-button>Button 1</elemnt-button>
+                <elemnt-button>Button 2</elemnt-button>
+                <elemnt-button>Button 3</elemnt-button>
+            </elemnt-button-group>
+
+            <p>Text</p>
+            <elemnt-button-group type="text">
+                <elemnt-button>Button 1</elemnt-button>
+                <elemnt-button>Button 2</elemnt-button>
+                <elemnt-button>Button 3</elemnt-button>
+            </elemnt-button-group>
+
+            <p>Change button size</p>
+            <elemnt-button-group size="small">
+                <elemnt-button>Button 1</elemnt-button>
+                <elemnt-button>Button 2</elemnt-button>
+                <elemnt-button>Button 3</elemnt-button>
+            </elemnt-button-group>
+
+            <elemnt-button-group size="medium">
+                <elemnt-button>Button 1</elemnt-button>
+                <elemnt-button>Button 2</elemnt-button>
+                <elemnt-button>Button 3</elemnt-button>
+            </elemnt-button-group>
+
+            <elemnt-button-group size="large">
+                <elemnt-button>Button 1</elemnt-button>
+                <elemnt-button>Button 2</elemnt-button>
+                <elemnt-button>Button 3</elemnt-button>
+            </elemnt-button-group>
+
         </section>
     </main>
 
@@ -120,5 +167,6 @@
     <script type="module" defer src="/site/site-header.js"></script>
     <script type="module" defer src="/site/site-nav.js"></script>
     <script type="module" defer src="/js/components/elemnt-button.js"></script>
+    <script type="module" defer src="/js/components/elemnt-button-group.js"></script>
 </body>
 </html>

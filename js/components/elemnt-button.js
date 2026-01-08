@@ -11,7 +11,7 @@ styles.replaceSync(/* css */`
         cursor: pointer;
         transition: all 0.3s;
         text-decoration: none;
-        border: 2px solid var(--elemnt-button-color, blue);
+        border: var(--elemnt-button-border-width) solid var(--elemnt-button-color, blue);
 
         &:hover,
         &:active {
@@ -44,7 +44,7 @@ styles.replaceSync(/* css */`
 
     [part="button"][type="outlined"] {
         background-color: transparent;
-        border: 2px solid var(--elemnt-button-color, blue);
+        border: var(--elemnt-button-border-width) solid var(--elemnt-button-color, blue);
         color: var(--elemnt-button-color, blue);
 
         &[disabled]:hover,
@@ -91,6 +91,32 @@ styles.replaceSync(/* css */`
         }
     }
 
+    :host-context(elemnt-button-group) [part="button"] {
+        border-radius: 0;
+    }
+
+    :host([in-group]) [part="button"] {
+        border-radius: 0;
+    }
+    :host([in-group]):not(:host([first-in-group])) [part="button"] {
+        margin-left: calc(-1 * var(--elemnt-button-border-width));
+    }
+    :host([first-in-group]) [part="button"] {
+        border-top-left-radius: var(--elemnt-button-border-radius);
+        border-bottom-left-radius: var(--elemnt-button-border-radius);
+    }
+    :host([last-in-group]) [part="button"] {
+        border-top-right-radius: var(--elemnt-button-border-radius);
+        border-bottom-right-radius: var(--elemnt-button-border-radius);
+    }
+
+    slot[name="start"]::slotted(*),
+    slot[name="end"]::slotted(*) {
+        display: inline-block;
+        height: var(--elemnt-button-font-size);
+        width: var(--elemnt-button-font-size);
+    }
+
 `)
 
 const template = document.createElement("template")
@@ -106,6 +132,11 @@ export class elemntButton extends HTMLElement {
     static define(tagName = "elemnt-button") {
         customElements.define(tagName, this)
     }
+
+    static get observedAttributes() {
+        return ["type", "size"]; // Watch for changes to "type" and "size"
+    }
+    
     shadowRoot = this.attachShadow({ mode: "open" });
 
     connectedCallback() {
@@ -136,6 +167,22 @@ export class elemntButton extends HTMLElement {
                 }))
             }
         })
+    }
+
+    attributeChangedCallback(name, oldValue, newValue) {
+        if (oldValue !== newValue) {
+            const inner = this.shadowRoot.querySelector('[part="button"]');
+            if (!inner) return;
+            if (name === "type") {
+                inner.setAttribute("type", newValue || "");
+            } else if (name === "size") {
+                if (newValue) {
+                    inner.setAttribute("size", newValue);
+                } else {
+                    inner.removeAttribute("size");
+                }
+            }
+        }
     }
 
     checkAs(inner) {
