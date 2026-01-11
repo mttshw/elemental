@@ -22,6 +22,8 @@ styles.replaceSync(/* css */`
 const pages = [
     { name: "Button", href: "/components/button.html" },
     { name: "Card", href: "/components/card.html" },
+    { name: "Menu", href: "/components/menu.html" },
+    { name: "Typography", href: "/components/typography.html" },
 ];
 
 const template = document.createElement("template");

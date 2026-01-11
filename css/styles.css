@@ -5,6 +5,8 @@
     --primary-color-contrast: white;
 
     --text-color: rgb(33, 33, 33);
+
+    --elemnt-border-radius: 4px;
     
     --accent-color: rgb(255, 149, 0);
     --accent-color-dark: rgb(178, 104, 0);
@@ -33,7 +35,7 @@
     --elemnt-button-color-hover-accent: var(--accent-color-dark);
     --elemnt-button-contrast-color-accent: var(--accent-color-contrast);
     --elemnt-button-padding: 10px 20px;
-    --elemnt-button-border-radius: 4px;
+    --elemnt-button-border-radius: var(--elemnt-border-radius);
     --elemnt-button-padding-small: 4px 8px;
     --elemnt-button-padding-large: 12px 24px;
     --elemnt-button-font-size: 1rem;
@@ -54,6 +56,9 @@
     --elemnt-card-content-font-size: 1rem;
     --elemnt-card-content-color: #666;
     --elemnt-card-gap: 15px;
+
+    --elemnt-menu-background-color: #fafafa;
+    --elemnt-menu-border-color: #ddd;
 }
 
 body {

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<head>
+    <title>elemnt</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+</head>
+<body>
+    <site-header></site-header>
+    <main>
+        <site-nav></site-nav>
+        <section id="content">
+
+            <h1>Menu</h1>
+
+            <p>You can add vertical or horizontal menus. They accept <code>a</code> elements or <code>button</code> elements as children. 
+                Or you can use an <code>elemnt-menu-item</code> component to give you slots at the start or end to use for icons.</p>
+
+            <elemnt-menu orientation="horizontal">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </elemnt-menu>
+<br>
+            <elemnt-menu orientation="vertical">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <button>Services</button>
+                <a href="#">Contact</a>
+            </elemnt-menu>
+
+            <p>Default alignment is to the left but you can change that.</p>
+
+            <elemnt-menu orientation="horizontal" alignment="center">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </elemnt-menu>
+<br>
+            <elemnt-menu orientation="vertical" alignment="center">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <button>Services</button>
+                <a href="#">Contact</a>
+            </elemnt-menu>
+            <br>
+            <elemnt-menu orientation="horizontal" alignment="right">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#" disabled>Services</a>
+                <a href="#">Contact</a>
+            </elemnt-menu>
+<br>
+            <elemnt-menu orientation="vertical" alignment="right">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <button>Services</button>
+                <a href="#">Contact</a>
+            </elemnt-menu>
+
+<p>By default menus stretch to fit their container. But you can restrict them to just the width of their content.</p>
+            <elemnt-menu orientation="horizontal" width="content">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </elemnt-menu>
+<br>
+<br>
+            <elemnt-menu orientation="vertical" width="content">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </elemnt-menu>
+
+            <p>Icons should be able to be set as prefix or suffix.</p>
+            <p>Should be able to define a separator.</p>
+            <p>Should be able to define a collapsible menu.</p>
+
+
+        </section>
+    </main>
+
+    <site-footer></site-footer>
+    <script type="module" defer src="/site/site-footer.js"></script>
+    <script type="module" defer src="/site/site-header.js"></script>
+    <script type="module" defer src="/site/site-nav.js"></script>
+    <script type="module" defer src="/js/components/elemnt-menu.js"></script>
+
+</body>
+</html>
